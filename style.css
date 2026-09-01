@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar {
+    background-color: #d1202d;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Poppins SemiBold';
+    font-size: 2em;
+}
+
+
+.topbar a
+    {
+        color:white;
+        text-decoration:none;
+    }
+
+#text1,
+#text2 {
+    text-align: justify;
+    height: 100vh;
+    resize: none;
+    background-color: #444444;
+    color: white;
+    height: 100%;
+    font-family: 'Khand';
+    font-size: 50px;
+}
+
+#text1,
+#text2 {
+    padding: 25px;
+}
+
+#text1 {
+    font-family: Preeti;
+}
+
+.content1,
+.content2 {
+    display: flex;
+    flex-direction: column;
+    height: 80dvh;
+    width: 100%;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#font_selector {
+    padding: 10px
+}
+
+.developer {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Poppins SemiBold';
+}
+
+.developer a {
+    color: white;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.developer a:hover {
+    color: #1877F2;
+}
