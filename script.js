@@ -8,6 +8,13 @@
 // );
 
 
+var character_count1 = document.getElementById('character_count1');
+var word_count1 = document.getElementById('word_count1');
+
+var character_count2 = document.getElementById('character_count2');
+var word_count2 = document.getElementById('word_count2');
+
+
 
 var font = document.getElementById("font_selector");
 var text2 = document.getElementById("text2");
@@ -22,14 +29,12 @@ for (let i = 0; i < special_btn.length; i++) {
         'click', async (e) => {
 
             // console.log(special_btn[i].innerHTML)
-            try
-                {
-                 navigator.clipboard.writeText(special_btn[i].innerHTML);
-                }
-                catch(err)
-                {
-                    console.log("SHIT !!!");
-                }
+            try {
+                navigator.clipboard.writeText(special_btn[i].innerHTML);
+            }
+            catch (err) {
+                console.log("SHIT !!!");
+            }
         }
 
     )
@@ -37,10 +42,37 @@ for (let i = 0; i < special_btn.length; i++) {
 
 text1.addEventListener('input', x = () => {
 
+    var textVal1 = text1.value 
     text2.value = text1.value;
-    console.log("ok");
+    character_count1.innerHTML = text1.value.length;
+    word_count1.innerHTML = textVal1.match(/ /g).length;
 
+
+    var textVal2 = text2.value 
+    // // text2.value = text1.value;
+    character_count2.innerHTML = text2.value.length;
+        if(textVal1.match(/ /g) === 0)
+            {
+                alert("0 Worlds")
+            }
+        else
+        {
+            word_count2.innerHTML = textVal2.match(/ /g).length;
+        }
 });
+
+text2.addEventListener('input', x = () => {
+
+    var textVal2 = text2.value 
+    // // text2.value = text1.value;
+    character_count2.innerHTML = text2.value.length;
+
+    word_count2.innerHTML = textVal2.match(/ /g).length;
+});
+
+
+
+
 
 var fontChange = () => {
     text2.style.fontFamily = "'" + font.value + "'";

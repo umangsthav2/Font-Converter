@@ -22,8 +22,7 @@ body {
         word-wrap: break-word;
     }
 
-#text1,
-#text2 {
+#text1, #text2 {
     text-align: justify;
     height: 100vh;
     resize: none;
@@ -119,3 +118,18 @@ body {
     border:#d1202d 2px solid
     
     }
+
+.counter
+    {
+        display: flex;
+        justify-content:space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+.number_counter
+{
+    font-family: Poppins;
+    font-size:24px;
+
+}
